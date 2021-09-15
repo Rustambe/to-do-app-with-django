@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <title>Deleted</title>
+</head>
+<body style="background-color: #638CB8">
+<div style="width:600px;
+		margin: 60px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);">
+    <h4 style="text-align:center" >Are you sure to delete '{{item}}'?</h4>
+
+
+    <form style="display:flex; justify-content:center; gap:50px; margin-top:50px" method="POST" action="">
+        {% csrf_token %}
+        <a style="text-decoration:none" class="btn-lg btn-danger" href="{% url 'list' %}">Cancel</a>
+        <input class="btn-lg btn-info" type="submit" name="Confirm">
+    </form>
+</div>
+</body>
+</html>
